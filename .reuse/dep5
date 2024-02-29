@@ -1,0 +1,22 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: .github
+Upstream-Contact: IronCore authors <ospo@sap.com>
+Source: https://github.com/ironcore-dev/.github
+
+# --------------------------------------------------
+# source code
+
+Files:
+  .github/*
+  CODE_OF_CONDUCT.md
+  SECURITY.md
+Copyright: 2024 SAP SE or an SAP affiliate company and IronCore contributors
+License: Apache-2.0
+
+# --------------------------------------------------
+# documentation
+
+Files:
+  README.md
+Copyright: 2024 SAP SE or an SAP affiliate company and IronCore contributors
+License: Apache-2.0
