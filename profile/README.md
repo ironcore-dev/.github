@@ -17,7 +17,7 @@ IronCore provides a reference for compounded software layers for inventorying, m
 ## :penguin: Features
 
 - **Single Interface:** Single Interface for managing resources orchestrated across regions, data centers, and availability zones.
-- **Vendor-Neutral Storage Backend:** Ceph is modularly provided as a cloud-natively automated, vendor-neutral storage backend for block, shared, and object storag.
+- **Vendor-Neutral Storage Backend:** Ceph is modularly provided as a cloud-natively automated, vendor-neutral storage backend for block, shared, and object storage.
 - **CLOS Network Fabric:** Network fabric based on CLOS Topology is included.
 
 ## :busts_in_silhouette: Get Involved
