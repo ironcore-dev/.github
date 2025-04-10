@@ -31,4 +31,4 @@ To facilitate a nice environment for all, check out [our Code of Conduct](https:
 
 ## :books: Learn More
 
-To learn more about IronCore, check out the official documentation at [https://ironcore-dev.github.io/docs/](https://ironcore-dev.github.io/docs/)!
+To learn more about IronCore, check out the [official documentation](https://ironcore-dev.github.io/docs/)!
