@@ -1,6 +1,6 @@
 # Welcome to the IronCore Project
 
-<img src="https://github.com/ironcore-dev/ironcore/blob/main/docs/assets/logo.svg" alt="IronCore Logo" width="200" />
+<img src="https://github.com/ironcore-dev/ironcore/blob/main/docs/assets/logo_borderless.svg" alt="IronCore Logo" width="200" />
 
 :wave: Welcome to the official GitHub presence of IronCore. We are part of [ApeiroRA](https://apeirora.eu/content/projects/) which is an Important Project of Common European Interest - Next Generation Cloud Infrastructures and Services (IPCEI-CIS). Project IronCore is an open source system for managing compute and storage workloads across multiple providers.
 
