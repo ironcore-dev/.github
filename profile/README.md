@@ -12,7 +12,7 @@ Learn more about ApeiroRA by checking out the official website at [https://apeir
 
 ## :handshake: IronCore
 
-IronCore provides a reference for compounded software layers for inventorying, managing, and maintaining baremetal using Kubernetes’ cloud-native principles. IronCore can be used for cloud-native workloads via Gardener directly, where IronCore dynamically sources ephemeral virtual and physical machines for Kubernetes.
+The IronCore project is an open-source platform dedicated to empowering users with robust, declarative infrastructure management and bare metal automation, seamlessly integrating these capabilities into the cloud-native ecosystem via a Kubernetes-native APIs.
 
 ## :pushpin: IronCore and NeoNephos
 
