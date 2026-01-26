@@ -20,9 +20,20 @@ IronCore has been donated to the NeoNephos Foundation, a Linux Foundation initia
 
 ## :penguin: Features
 
-- **Single Interface:** Single Interface for managing resources orchestrated across regions, data centers, and availability zones.
-- **Vendor-Neutral Storage Backend:** Ceph is modularly provided as a cloud-natively automated, vendor-neutral storage backend for block, shared, and object storage.
-- **CLOS Network Fabric:** Network fabric based on CLOS Topology is included.
+- **Kubernetes-Native Bare Metal Lifecycle**  
+  Discover, provision, and manage physical servers using Kubernetes CRDs — including hardware inventory and Day-2 operations — fully declarative and API-driven.
+
+- **Unified IaaS Across Cloud, Data Center, and Edge**  
+  A consistent, declarative IaaS layer for compute, networking, and storage that spans regions, data centers, and edge environments.
+
+- **Modular, Pluggable Architecture**  
+  Loosely coupled components for compute, storage, and networking that can be swapped or extended to fit different infrastructures and providers.
+
+- **Deep Kubernetes Ecosystem Integration**  
+  Designed to work seamlessly with Cluster API, CSI/CCM, and Gardener, fitting naturally into existing Kubernetes control planes.
+
+- **Automatic Discovery & GitOps-Friendly Operations**  
+  Automatic hardware discovery combined with declarative lifecycle management enables reproducible, GitOps-style infrastructure workflows.
 
 ## :busts_in_silhouette: Get Involved
 
