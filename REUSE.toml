@@ -1,0 +1,26 @@
+version = 1
+SPDX-PackageName = "metal-operator"
+SPDX-PackageSupplier = "IronCore authors <ospo@sap.com>"
+SPDX-PackageDownloadLocation = "https://github.com/ironcore-dev/metal-operator"
+
+[[annotations]]
+path = [
+    ".github/**",
+    ".gitignore",
+    "CODEOWNERS",
+    "REUSE.toml",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SAP SE or an SAP affiliate company and IronCore contributors"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = [
+    "profile/**",
+    "README.md",
+    "CODE_OF_CONDUCT.md",
+    "SECURITY.md",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SAP SE or an SAP affiliate company and IronCore contributors"
+SPDX-License-Identifier = "CC-BY-4.0"
