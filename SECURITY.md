@@ -1,42 +1,75 @@
-<!-- START SAP SECURITY.MD V0.0.1 BLOCK -->
-<!-- Please do not remove the version header, this is needed for automatic updates of the SECURITY.md -->
-# SAP Open Source Security Policy
+# IronCore Security Release Process
 
-SAP takes the security of our software products and services seriously, which includes all source code repositories managed through our GitHub organizations, including our primary [SAP](https://github.com/SAP), [SAP-docs](https://github.com/SAP-docs) organizations as well as [our other GitHub organizations and projects](https://opensource.sap.com).
+IronCore is a growing community of volunteers and users. The IronCore community has adopted this security disclosure and response policy to ensure we responsibly handle critical issues.
 
-If you believe you have found a security vulnerability in any SAP-owned repository, please report it to us as described below.
+## IronCore Security Team
 
-## Reporting Security Issues
+Security vulnerabilities should be handled quickly and sometimes privately. The primary goal of this process is to reduce the total time users are vulnerable to publicly known exploits. The IronCore Security Team is responsible for organizing the entire response, including internal communication and external disclosure, but will need help from relevant developers and release managers to successfully run this process. The IronCore Security Team consists of the following volunteers:
 
-**Please do not report security vulnerabilities through public GitHub issues.**
+* TBD
 
-Instead, please report them via the SAP Trust Center at [https://www.sap.com/about/trust-center/security/incident-management.html](https://www.sap.com/about/trust-center/security/incident-management.html).
+## Disclosures
 
-If you prefer to submit via email, please send an email to [secure@sap.com](mailto:secure@sap.com). If possible, encrypt your message with our PGP key; please download it from the [SAP Trust Center](https://www.sap.com/dmc/policies/pgp/keyblock.txt).
+### Private Disclosure Process
 
-Please include the requested information listed below (as much as you can provide) to help us better understand the nature and scope of the possible issue:
+The IronCore community asks that all suspected vulnerabilities be privately and responsibly disclosed. If you've found a vulnerability or a potential vulnerability in IronCore, please let us know by writing an e-mail to [ironcore-security@groups.linuxfoundation.org](mailto:ironcore-security@groups.linuxfoundation.org). We'll send a confirmation e-mail to acknowledge your report, and we'll send an additional e-mail when we've identified the issue positively or negatively.
 
-  - The repository name or URL
-  - Type of issue (buffer overflow, SQL injection, cross-site scripting, etc.)
-  - Full paths of the source file(s) related to the manifestation of the issue
-  - The location of the affected source code (tag/branch/commit or direct URL)
-  - Any particular configuration required to reproduce the issue
-  - Step-by-step instructions to reproduce the issue
-  - Proof-of-concept or exploit code (if possible)
-  - Impact of the issue, including how an attacker might exploit the issue
+### Public Disclosure Process
 
-This information will help us triage your report more quickly.
+If you know of a publicly disclosed vulnerability please IMMEDIATELY write an e-mail to [ironcore-security@groups.linuxfoundation.org](mailto:ironcore-security@groups.linuxfoundation.org) to inform the IronCore Security Team about the vulnerability so they may start the patch, release, and communication process.
 
-## Preferred Languages
+If possible, the IronCore Security Team will ask the person making the public report if the issue can be handled via a [private disclosure process](#private-disclosure-process) (for example, if the full exploit details have not yet been published). If the reporter denies the request for private disclosure, the IronCore Security Team will move swiftly with the fix and release process. In extreme cases GitHub can be asked to delete the issue but this generally isn't necessary and is unlikely to make a public disclosure less damaging.
 
-We prefer all communications to be in English.
+## Patch, Release, and Public Communication
 
-## Disclosure Guidelines
+For each vulnerability, a member of the IronCore Security Team will volunteer to lead coordination with the "Fix Team" and is responsible for sending disclosure e-mails to the rest of the community. This lead will be referred to as the "Fix Lead." The role of the Fix Lead should rotate round-robin across the IronCore Security Team. Note that given the current size of the IronCore community it is likely that the IronCore Security Team is the same as the "Fix Team" (i.e., all maintainers).
 
-We like to ask you to follow the [Disclosure Guidelines for SAP Security Advisories](https://www.sap.com/documents/2022/02/9ccd9ca0-167e-0010-bca6-c68f7e60039b.html).
+The IronCore Security Team may decide to bring in additional contributors for added expertise depending on the area of the code that contains the vulnerability. All of the timelines below are suggestions and assume a private disclosure. The Fix Lead drives the schedule using his best judgment based on severity and development time.
 
-## SAP Internal Response Process
+If the Fix Lead is dealing with a public disclosure, all timelines become ASAP (assuming the vulnerability has a CVSS score >= 7; see below). If the fix relies on another upstream project's disclosure timeline, that will adjust the process as well. We will work with the upstream project to fit their timeline and best protect our users.
 
-As an SAP employee, please check our internal open source security response process ([go/oss-security-response](https://go.sap.corp/oss-security-response)) for further details on how to handle security incidents.
+### Fix Team Organization
 
-<!-- END SAP SECURITY.MD V0.0.1 BLOCK -->
+The Fix Lead will work quickly to identify relevant engineers from the affected projects and packages and CC those engineers into the disclosure thread. These selected developers are the Fix Team. The Fix Lead will give the Fix Team access to a private security repository to develop the fix.
+
+### Fix Development Process
+
+The Fix Lead and the Fix Team will create a [CVSS](https://www.first.org/cvss/specification-document) using the [CVSS Calculator](https://www.first.org/cvss/calculator/3.0). The Fix Lead makes the final call on the calculated CVSS; it is better to move quickly than make the CVSS perfect.
+
+The Fix Team will notify the Fix Lead that work on the fix branch is complete once there are LGTMs on all commits in the private repository from one or more maintainers.
+
+If the CVSS score is under 7.0 (a [medium severity score](https://www.first.org/cvss/specification-document#i5)) the Fix Team can decide to slow the release process down in the face of holidays, developer bandwidth, etc. These decisions must be discussed on the private [IronCore Security mailing list](#communication-channel).
+
+### Fix Disclosure Process
+
+With the fix development underway, the Fix Lead needs to come up with an overall communication plan for the wider community. This Disclosure process should begin after the Fix Team has developed a Fix or mitigation so that a realistic timeline can be communicated to users. The Fix Lead will inform the [IronCore mailing list](#communication-channel) that a security vulnerability has been disclosed and that a fix will be made available in the future on a certain release date. The Fix Lead will include any mitigating steps users can take until a fix is available. The communication to IronCore users should be actionable. They should know when to block time to apply patches, understand exact mitigation steps, etc.
+
+### Fix Release Day
+
+The Release Managers will ensure all the binaries are built, publicly available, and functional before the Release Date. The Release Managers will create a new patch release branch from the latest patch release tag + the fix from the security branch. The Fix Lead will cherry-pick the patches onto the main branch and all relevant release branches. The Fix Team will LGTM and merge. The Release Managers will merge these PRs as quickly as possible.
+
+Changes shouldn't be made to the commits, even for a typo in the CHANGELOG, as this will change the git sha of the already built commits, leading to confusion and potentially conflicts as the fix is cherry-picked around branches. The Fix Lead will request a CVE via the [GitHub Security advisory process](https://docs.github.com/en/code-security/security-advisories) with all the relevant information (description, potential impact, affected version, fixed version, CVSS v3 base score, and supporting documentation for the CVSS score) for every vulnerability. The Fix Lead will inform the [IronCore mailing list](#communication-channel) and announce the new releases, the CVE number (if available), the location of the binaries, and the relevant merged PRs to get wide distribution and user action.
+
+As much as possible, this e-mail should be actionable and include links how to apply the fix to users environments; this can include links to external distributor documentation. The recommended target time is 4pm UTC on a non-Friday weekday. This means the announcement will be seen morning Pacific, early evening Europe, and late evening Asia. The Fix Lead will remove the Fix Team from the private security repository.
+
+### Retrospective
+
+These steps should be completed after the Release Date. The retrospective process [should be blameless](https://landing.google.com/sre/book/chapters/postmortem-culture.html).
+
+The Fix Lead will send a retrospective of the process to the [IronCore mailing list](#communication-channel) including details on everyone involved, the timeline of the process, links to relevant PRs that introduced the issue, if relevant, and any critiques of the response and release process. The Release Managers and Fix Team are also encouraged to send their own feedback on the process to the [IronCore mailing list](#communication-channel). Honest critique is the only way we are going to get good at this as a community.
+
+### Communication Channel
+
+The [private](#private-disclosure-process) or [public disclosure process](#public-disclosure-process) should be triggered exclusively by writing an e-mail to [ironcore-security@groups.linuxfoundation.org](mailto:ironcore-security@groups.linuxfoundation.org).
+
+IronCore security announcements will be communicated by the Fix Lead sending an e-mail to the [IronCore mailing list](https://groups.linuxfoundation.org/g/ironcore-discussion) (reachable via [ironcore-discussion@groups.linuxfoundation.org](mailto:ironcore-discussion@groups.linuxfoundation.org)).
+
+Public discussions about IronCore security announcements and retrospectives will primarily happen in the IronCore mailing list. Thus IronCore community members who are interested in participating in discussions related to the IronCore Security Release Process are encouraged to join the IronCore mailing list.
+
+The members of the [IronCore Security Team](#ironcore-security-team) are subscribed to the private [IronCore Security mailing list](https://groups.linuxfoundation.org/g/ironcore-security) (reachable via [ironcore-security@groups.linuxfoundation.org](mailto:ironcore-security@groups.linuxfoundation.org)).
+
+## Open-Source Steward
+
+CRA stewardship: This project is supported under the Linux Foundation CRA stewardship framework, as described at https://www.linuxfoundation.org/security. Security vulnerabilities should be reported through the mechanisms described above, which we will coordinate with our CRA steward. For actively exploited vulnerabilities and severe incidents that may require CRA escalation, please use the project's emergency security reporting mechanisms as appropriate.
+
+The LF CRA steward can be reached at [steward@linuxfoundation.org](mailto:steward@linuxfoundation.org).
