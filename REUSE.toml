@@ -1,12 +1,13 @@
 version = 1
-SPDX-PackageName = "metal-operator"
+SPDX-PackageName = ".github"
 SPDX-PackageSupplier = "IronCore authors <ospo@sap.com>"
-SPDX-PackageDownloadLocation = "https://github.com/ironcore-dev/metal-operator"
+SPDX-PackageDownloadLocation = "https://github.com/ironcore-dev/.github"
 
 [[annotations]]
 path = [
-    ".github/**",
-    ".gitignore",
+    ".github/workflows/reuse.yml",
+    ".github/workflows/size-label.yml",
+    ".github/dependabot.yml",
     "CODEOWNERS",
     "REUSE.toml",
 ]
@@ -16,7 +17,7 @@ SPDX-License-Identifier = "Apache-2.0"
 
 [[annotations]]
 path = [
-    "profile/**",
+    "profile/README.md",
     "README.md",
     "CODE_OF_CONDUCT.md",
     "SECURITY.md",
