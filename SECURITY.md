@@ -52,11 +52,7 @@ With the fix development underway, the Fix Lead needs to come up with an overall
 
 ### Fix Release Day
 
-The Release Managers will ensure all the binaries are built, publicly available, and functional before the Release Date. The Release Managers will create a new patch release branch from the latest patch release tag + the fix from the security branch. The Fix Lead will cherry-pick the patches onto the main branch and all relevant release branches. The Fix Team will LGTM and merge. The Release Managers will merge these PRs as quickly as possible.
-
-Changes shouldn't be made to the commits, even for a typo in the CHANGELOG, as this will change the git sha of the already built commits, leading to confusion and potentially conflicts as the fix is cherry-picked around branches. The Fix Lead will request a CVE via the [GitHub Security advisory process](https://docs.github.com/en/code-security/security-advisories) with all the relevant information (description, potential impact, affected version, fixed version, CVSS v3 base score, and supporting documentation for the CVSS score) for every vulnerability. The Fix Lead will inform the [IronCore mailing list](#communication-channel) and announce the new releases, the CVE number (if available), the location of the binaries, and the relevant merged PRs to get wide distribution and user action.
-
-As much as possible, this e-mail should be actionable and include links how to apply the fix to users environments; this can include links to external distributor documentation. The recommended target time is 4pm UTC on a non-Friday weekday. This means the announcement will be seen morning Pacific, early evening Europe, and late evening Asia. The Fix Lead will remove the Fix Team from the private security repository.
+On the release day, at the communicated time, a maintainer involved in the disclosure process cuts a release and publishes the artifacts. The Fix Lead requests a CVE via the [GitHub Security advisory process](https://docs.github.com/en/code-security/security-advisories) and announces the release, the CVE number, and the relevant merged PRs on the [IronCore mailing list](#communication-channel). The announcement should be actionable and include links on how to apply the fix. The Fix Lead will remove the Fix Team from the private repository.
 
 ### Retrospective
 
