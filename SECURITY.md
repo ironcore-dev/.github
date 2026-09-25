@@ -32,7 +32,7 @@ For each vulnerability, a member of the IronCore Security Team will volunteer to
 
 The IronCore Security Team may decide to bring in additional contributors for added expertise depending on the area of the code that contains the vulnerability. All of the timelines below are suggestions and assume a private disclosure. The Fix Lead drives the schedule using his best judgment based on severity and development time.
 
-If the Fix Lead is dealing with a public disclosure, all timelines become ASAP (assuming the vulnerability has a CVSS score >= 7; see below). If the fix relies on another upstream project's disclosure timeline, that will adjust the process as well. We will work with the upstream project to fit their timeline and best protect our users.
+If the Fix Lead is dealing with a public disclosure, all timelines become ASAP and are handled within an appropriate time-frame given the scope of the vulnerability. If the fix relies on another upstream project's disclosure timeline, that will adjust the process as well. We will work with the upstream project to fit their timeline and best protect our users.
 
 ### Fix Team Organization
 
@@ -44,7 +44,7 @@ The Fix Lead and the Fix Team will create a [CVSS](https://www.first.org/cvss/sp
 
 The Fix Team will notify the Fix Lead that work on the fix branch is complete once there are LGTMs on all commits in the private repository from one or more maintainers.
 
-If the CVSS score is under 7.0 (a [medium severity score](https://www.first.org/cvss/specification-document#i5)) the Fix Team can decide to slow the release process down in the face of holidays, developer bandwidth, etc. These decisions must be discussed on the private [IronCore Security mailing list](#communication-channel).
+For lower-severity issues the Fix Team can decide to slow the release process down in the face of holidays, developer bandwidth, etc. These decisions must be discussed on the private [IronCore Security mailing list](#communication-channel).
 
 ### Fix Disclosure Process
 
