@@ -28,7 +28,7 @@ If possible, the IronCore Security Team will ask the person making the public re
 
 ## Patch, Release, and Public Communication
 
-For each vulnerability, a member of the IronCore Security Team will volunteer to lead coordination with the "Fix Team" and is responsible for sending disclosure e-mails to the rest of the community. This lead will be referred to as the "Fix Lead." The role of the Fix Lead should rotate round-robin across the IronCore Security Team. Note that given the current size of the IronCore community it is likely that the IronCore Security Team is the same as the "Fix Team" (i.e., all maintainers).
+For each vulnerability, a member of the IronCore Security Team will volunteer to lead coordination with the "Fix Team" and is responsible for sending disclosure e-mails to the rest of the community. This lead will be referred to as the "Fix Lead."
 
 The IronCore Security Team may decide to bring in additional contributors for added expertise depending on the area of the code that contains the vulnerability. All of the timelines below are suggestions and assume a private disclosure. The Fix Lead drives the schedule using his best judgment based on severity and development time.
 
@@ -36,7 +36,7 @@ If the Fix Lead is dealing with a public disclosure, all timelines become ASAP (
 
 ### Fix Team Organization
 
-The Fix Lead will work quickly to identify relevant engineers from the affected projects and packages and CC those engineers into the disclosure thread. These selected developers are the Fix Team. The Fix Lead will give the Fix Team access to a private security repository to develop the fix.
+The Fix Lead will work quickly to identify relevant engineers from the affected projects and packages and include those engineers into the disclosure. These selected developers are the Fix Team. The Fix Lead will give the Fix Team access to a private repository to develop the fix.
 
 ### Fix Development Process
 
