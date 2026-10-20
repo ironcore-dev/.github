@@ -18,11 +18,11 @@ Security vulnerabilities should be handled quickly and sometimes privately. The 
 
 ### Private Disclosure Process
 
-The IronCore community asks that all suspected vulnerabilities be privately and responsibly disclosed. If you've found a vulnerability or a potential vulnerability in IronCore, please let us know by writing an e-mail to [ironcore-security@groups.linuxfoundation.org](mailto:ironcore-security@groups.linuxfoundation.org). We'll send a confirmation e-mail to acknowledge your report, and we'll send an additional e-mail when we've identified the issue positively or negatively.
+The IronCore community asks that all suspected vulnerabilities be privately and responsibly disclosed. If you've found a vulnerability or a potential vulnerability in IronCore, please let us know by writing an e-mail to [ironcore-dev@sap.com](mailto:ironcore-dev@sap.com). We'll send a confirmation e-mail to acknowledge your report, and we'll send an additional e-mail when we've identified the issue positively or negatively.
 
 ### Public Disclosure Process
 
-If you know of a publicly disclosed vulnerability please IMMEDIATELY write an e-mail to [ironcore-security@groups.linuxfoundation.org](mailto:ironcore-security@groups.linuxfoundation.org) to inform the IronCore Security Team about the vulnerability so they may start the patch, release, and communication process.
+If you know of a publicly disclosed vulnerability please IMMEDIATELY write an e-mail to [ironcore-dev@sap.com](mailto:ironcore-dev@sap.com) to inform the IronCore Security Team about the vulnerability so they may start the patch, release, and communication process.
 
 If possible, the IronCore Security Team will ask the person making the public report if the issue can be handled via a [private disclosure process](#private-disclosure-process) (for example, if the full exploit details have not yet been published). If the reporter denies the request for private disclosure, the IronCore Security Team will move swiftly with the fix and release process. In extreme cases GitHub can be asked to delete the issue but this generally isn't necessary and is unlikely to make a public disclosure less damaging.
 
@@ -62,13 +62,15 @@ The Fix Lead will send a retrospective of the process to the [IronCore mailing l
 
 ### Communication Channel
 
-The [private](#private-disclosure-process) or [public disclosure process](#public-disclosure-process) should be triggered exclusively by writing an e-mail to [ironcore-security@groups.linuxfoundation.org](mailto:ironcore-security@groups.linuxfoundation.org).
+The [private](#private-disclosure-process) or [public disclosure process](#public-disclosure-process) should be triggered exclusively by writing an e-mail to [ironcore-dev@sap.com](mailto:ironcore-dev@sap.com).
 
 IronCore security announcements will be communicated by the Fix Lead sending an e-mail to the [IronCore mailing list](https://groups.linuxfoundation.org/g/ironcore-discussion) (reachable via [ironcore-discussion@groups.linuxfoundation.org](mailto:ironcore-discussion@groups.linuxfoundation.org)).
 
 Public discussions about IronCore security announcements and retrospectives will primarily happen in the IronCore mailing list. Thus IronCore community members who are interested in participating in discussions related to the IronCore Security Release Process are encouraged to join the IronCore mailing list.
 
+<!-- TODO: switch back once LFX mailing lists are working
 The members of the [IronCore Security Team](#ironcore-security-team) are subscribed to the private [IronCore Security mailing list](https://groups.linuxfoundation.org/g/ironcore-security) (reachable via [ironcore-security@groups.linuxfoundation.org](mailto:ironcore-security@groups.linuxfoundation.org)).
+-->
 
 ## Open-Source Steward
 
